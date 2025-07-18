@@ -6,7 +6,7 @@ using System.Net;
 
 namespace EFCrud.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ClientsController : ControllerBase
     {
@@ -65,7 +65,7 @@ namespace EFCrud.Controllers
         //INSERT: Update Client
 
         [HttpPut("{id}")]
-        public IActionResult EditClient(int id, ClientDto clientDto)
+        public IActionResult UpdateClient(int id, ClientDto clientDto)
         {
             // submitted data is valid
 
